@@ -1,0 +1,13 @@
+{
+    "EMAIL" : "dummy-token-placeholder",
+    "LOGIN_TYPE" : "token",
+    "OWNER" : "111003133475307520",
+    "PASSWORD" : "",
+    "PREFIXES" : [
+        "!"
+    ],
+    "default" : {
+        "ADMIN_ROLE" : "admin",
+        "MOD_ROLE" : "mod"
+    }
+}
