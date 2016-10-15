@@ -397,18 +397,8 @@ def main():
         print("and: pip3 install -U git+https://github.com/Rapptz/"
               "discord.py@master#egg=discord.py[voice]")
     print("Official server: https://discord.me/Red-DiscordBot")
-    if settings.login_type == "token":
-        try:
-            yield from bot.login(settings.email)
-        except TypeError as e:
-            print(e)
-            msg = ("\nYou are using an outdated discord.py.\n"
-                   "update your discord.py with by running this in your cmd "
-                   "prompt/terminal.\npip3 install --upgrade git+https://"
-                   "github.com/Rapptz/discord.py@async")
-            sys.exit(msg)
-    else:
-        yield from bot.login(settings.email, settings.password)
+    yield from bot.login(os.environ['REDBOTPASS'])
+
     yield from bot.connect()
 
 if __name__ == '__main__':
