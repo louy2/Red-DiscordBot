@@ -1,0 +1,1 @@
+bot: python3.5 red.py --no-prompt
